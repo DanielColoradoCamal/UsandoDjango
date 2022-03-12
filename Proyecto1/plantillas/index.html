@@ -8,5 +8,19 @@
 </head>
 <body>
     <h1>Hola mundo!!</h1>
+
+    <p>Nombre: {{nombre}}</p>
+    <p>Apellido: {{apellido}}</p>
+    <p>notas: {{notas}}</p>
+    <p>
+        {% for n in notas %}
+            {% if n < 6 %}
+                <p style="color:red"> NOTA MALA {{n}}</p>
+            {% else %} 
+                <p style="color:blue">NOTA BUENA {{n}}</p>
+            {% endif %}
+        {% endfor %}
+    </p>
+
 </body>
 </html>
